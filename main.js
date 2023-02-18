@@ -83,3 +83,26 @@ function getTextWidth(text, font) {
   var metrics = context.measureText(text);
   return metrics.width;
 }
+
+
+
+
+let typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  typeSpeed: 100, // Скорость печати
+  startDelay: 500, // Задержка перед стартом анимации
+  backSpeed: 50, // Скорость удаления
+  loop: true
+});
+
+$(".element").typed({
+  typeSpeed: 0, // Скорость печати
+  backSpeed: 0, // Скорость удаления
+  startDelay: 0, // Задержка перед стартом анимации
+  backDelay: 500, // Пауза перед удалением 
+  loop: false,
+  loopCount: false,
+  showCursor: true,
+  attr: null,
+  callback: function(){ }
+});
