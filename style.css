@@ -1,0 +1,201 @@
+body {
+    background-color: #121313;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Kanit;
+    src: url("assets/fonts/Kanit/Kanit-Light.ttf") format("ttf"), url("assets/fonts/Kanit/Kanit-Light.ttf") format("ttf");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("assets/fonts/Nunito_Sans/NunitoSans-Light.ttf") format("ttf"), url("assets/fonts/Nunito_Sans/NunitoSans-Light.ttf") format("ttf");
+    font-display: fallback;
+}
+
+
+
+/* Выделение текста цветом */
+
+p::selection {
+    background-color: #00ff0d38;
+}
+
+p::-moz-selection{
+    background-color: #00ff0d38;
+}
+
+span::selection {
+    background-color: #00ff0d38;
+}
+
+span::-moz-selection{
+    background-color: #00ff0d38;
+}
+
+img::selection {
+    background-color: #00ff0d38;
+}
+
+img::-moz-selection{
+    background-color: #00ff0d38;
+}
+
+div::selection {
+    background-color: #00ff0d38;
+}
+
+div::-moz-selection{
+    background-color: #00ff0d38;
+}
+
+
+
+/* Падающие биты с неба */
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: green;
+}
+    
+body .lines {
+    position: fixed;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: consolas;
+    transform: rotate(270deg);
+    transition: transform 2s;
+    width: 10px;
+}
+    
+body .lines div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 30%, black 100%);
+}
+
+
+
+/* Главный контент */
+
+.container {
+    min-width: 1100px;
+}
+
+.striped-text {
+    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Nunito Sans', sans-serif; */
+    font-size: 50px;
+    /* text-transform: uppercase; */
+    background: repeating-linear-gradient(#FFF, #FFF 2px, #96cf8b 2px, #3c9c39 3px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #183D58;
+    display: table;
+    margin: 20px auto;
+}
+
+.content {
+    padding: 35px 0 35px 0;
+    margin-bottom: 30px 0 30px 0;
+    background: #020202;
+    position: relative;
+    z-index: 100;
+    border: 2px solid;
+	border-image: conic-gradient(from var(--angle), rgb(0, 255, 0), #020202, #020202, #020202, #020202, #020202, #020202, #020202, rgb(0, 255, 0)) 1;
+	
+	animation: 5s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+pre {
+    margin: 0;
+}
+
+
+
+/* Анимация дёрганного текста */
+
+.line1 {
+    display: inline-block;
+    animation: shake 1s ease-in-out infinite;
+    animation-delay: 3.5s;
+    animation-iteration-count: 1;
+}
+
+.line3 {
+    display: inline-block;
+    animation: shake 1s ease-in-out infinite;
+    animation-delay: 3s;
+    animation-iteration-count: 2;
+}
+
+.line4 {
+    display: inline-block;
+    animation: shake 1s ease-in-out infinite;
+    animation-delay: 4.2s;
+    animation-iteration-count: 1;
+}
+
+.line5 {
+    display: inline-block;
+    animation: shake 1s ease-in-out infinite;
+    animation-delay: 2.2s;
+    animation-iteration-count: 1;
+}
+  
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(16px);
+    }
+    40% {
+      transform: translateX(-3px);
+    }
+    60% {
+      transform: translateX(14px);
+    }
+    80% {
+      transform: translateX(-4px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
