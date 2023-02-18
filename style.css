@@ -147,6 +147,16 @@ pre {
     margin: 0;
 }
 
+.link:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.link:not(:hover) {
+    opacity: 1;
+    transition: 0.2s;
+}
+
 
 
 /* Анимация дёрганного текста */
