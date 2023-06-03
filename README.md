@@ -1,1 +1,1 @@
-site: https://daffiersquare2.github.io/Daffier/
+Site: https://daffiersquare2.github.io/Daffier/
