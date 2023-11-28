@@ -147,6 +147,18 @@ pre {
     margin: 0;
 }
 
+.links-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.link {
+    margin-right: 15px;
+}
+
 .link:hover {
     opacity: 0.6;
     transition: 0.2s;
