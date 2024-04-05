@@ -193,8 +193,10 @@ pre {
 /* Печатающийся текст */
 
 .text-typing {
+    max-width: 940px;
+    margin: 0 auto;
     font-size: 28px;
-    margin-top: 20px;
+    margin-top: 25px;
     font-family: 'Hackout', sans-serif;
     text-align: center;
 }
@@ -258,6 +260,10 @@ pre {
     .container {
         min-width: 900px;
     }
+
+    .text-typing {
+        max-width: 840px;
+    }
 }
 
 @media screen and (max-width: 985px) {
@@ -302,11 +308,19 @@ pre {
         width: 65px;
         height: 65px;
     }
+
+    .text-typing {
+        max-width: 700px;
+    }
 }
 
 @media screen and (max-width: 810px) {
     .container {
         min-width: 600px;
+    }
+
+    .text-typing {
+        max-width: 560px;
     }
 }
 
@@ -320,7 +334,7 @@ pre {
     }
 
     .striped-text {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .link {
@@ -358,7 +372,11 @@ pre {
     }
 
     .text-typing {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .text-typing {
+        max-width: 400px;
     }
 }
 
@@ -372,7 +390,7 @@ pre {
     }
 
     .striped-text {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .link {
@@ -410,6 +428,10 @@ pre {
     }
 
     .text-typing {
-        font-size: 16px;
+        font-size: 12px;
+    }
+
+    .text-typing {
+        max-width: 250px;
     }
 }
