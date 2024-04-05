@@ -1,15 +1,12 @@
 body {
-    background-color: #121313;
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin: 0;
-    text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    background: black;
+	overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 *,
@@ -27,6 +24,18 @@ body {
 @font-face {
     font-family: Nunito;
     src: url("assets/fonts/Nunito_Sans/NunitoSans-Light.ttf") format("ttf"), url("assets/fonts/Nunito_Sans/NunitoSans-Light.ttf") format("ttf");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: SDGlitch;
+    src: url("assets/fonts/SDGlitch.ttf") format("ttf");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: Hackout;
+    src: url("assets/fonts/Hackout-Eaw5j.otf") format("opentype");;
     font-display: fallback;
 }
 
@@ -70,14 +79,19 @@ div::-moz-selection{
 
 /* Падающие биты с неба */
 
+canvas {
+    position: absolute;
+    z-index: 1;
+}
+
 .main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
+
     color: rgb(1, 185, 1);
+    position: absolute;
+    z-index: 2;
 }
     
 body .lines {
@@ -107,11 +121,10 @@ body .lines div {
 }
 
 .striped-text {
-    font-family: 'Kanit', sans-serif;
-    /* font-family: 'Nunito Sans', sans-serif; */
     font-size: 50px;
-    /* text-transform: uppercase; */
-    background: repeating-linear-gradient(#FFF, #8bd17d 1px, #41b13d 2px);
+    font-family: 'Hackout', sans-serif;
+    text-align: center;
+    background: repeating-linear-gradient(#c5e5b1, #8bd17d 4px, #41b13d 4px);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #183D58;
@@ -144,7 +157,9 @@ body .lines div {
 }
 
 pre {
+    font-size: 24px;
     margin: 0;
+    text-align: center;
 }
 
 .links-block {
@@ -171,6 +186,17 @@ pre {
 
 .testcolor {
     color: #ff0000;
+}
+
+
+
+/* Печатающийся текст */
+
+.text-typing {
+    font-size: 28px;
+    margin-top: 20px;
+    font-family: 'Hackout', sans-serif;
+    text-align: center;
 }
 
 
@@ -223,5 +249,167 @@ pre {
     }
     100% {
       transform: translateX(0);
+    }
+}
+
+
+
+@media screen and (max-width: 1185px) {
+    .container {
+        min-width: 900px;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .container {
+        min-width: 730px;
+    }
+
+    pre {
+        font-size: 20px;
+    }
+
+    .striped-text {
+        font-size: 40px;
+    }
+
+    .link:nth-child(1) .link-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .link:nth-child(2) .link-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .link:nth-child(3) .link-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .link:nth-child(4) .link-img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .link:nth-child(5) .link-img {
+        width: 57px;
+        height: 57px;
+    }
+
+    .link:nth-child(6) .link-img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .container {
+        min-width: 600px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        min-width: 450px;
+    }
+
+    pre {
+        font-size: 17px;
+    }
+
+    .striped-text {
+        font-size: 35px;
+    }
+
+    .link {
+        margin-right: 10px;
+    }
+
+    .link:nth-child(1) .link-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .link:nth-child(2) .link-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .link:nth-child(3) .link-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .link:nth-child(4) .link-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .link:nth-child(5) .link-img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .link:nth-child(6) .link-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .text-typing {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .container {
+        min-width: 290px;
+    }
+
+    pre {
+        font-size: 10px;
+    }
+
+    .striped-text {
+        font-size: 24px;
+    }
+
+    .link {
+        margin-right: 5px;
+    }
+
+    .link:nth-child(1) .link-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .link:nth-child(2) .link-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .link:nth-child(3) .link-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .link:nth-child(4) .link-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .link:nth-child(5) .link-img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .link:nth-child(6) .link-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .text-typing {
+        font-size: 16px;
     }
 }
