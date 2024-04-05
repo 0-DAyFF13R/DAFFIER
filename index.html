@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 	<meta charset="UTF-8">
@@ -11,14 +10,30 @@
 	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Nunito+Sans&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
-	<title>Daffier</title>
+	<title>DAFFIER</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: black;
+			overflow: hidden;
+		}
+
+		canvas {
+			display: block;
+		}
+	</style>
 </head>
 
 <body>
+	<canvas id="c"></canvas>
 	<div class="main">
 		<div class="content">
 			<div class="container">
-				<pre>
+<pre>
 <span class="line1">╔══╗─╔══╗╔══╗╔══╗╔══╗╔═══╗╔═══╗</span>
 <span>║╔╗╚╗║╔╗║║╔═╝║╔═╝╚╗╔╝║╔══╝║╔═╗║</span>
 <span class="line3">║║╚╗║║╚╝║║╚═╗║╚═╗─║║─║╚══╗║╚═╝║</span>
@@ -27,30 +42,22 @@
 ╚═══╝╚╝╚╝╚╝──╚╝──╚══╝╚═══╝╚╝╚╝─</span>
 </pre>
 			</div>
-			<p class="striped-text">Web FullStack Developer <br>Penetration Tester</p>
+			<p class="striped-text">FullStack Web Developer <br>Penetration Tester</p>
 			<div class="links-block" style="filter: invert(1);">
-				<a class="link" target="_blank" rel="noopener noreferrer"
-					href="https://kwork.ru/user/daffier"><img src="assets/kwork.png" height="52" width="52"
-						style="filter: invert(1);" /></a>
-				<a class="link" target="_blank" rel="noopener noreferrer" href="https://t.me/daffier"><img
-						src="assets/telegram.svg" height="75" width="75" /></a>
-				<a class="link" target="_blank" rel="noopener noreferrer"
-					href="https://www.instagram.com/DaffierSquare2"> <img src="assets/brand-instagram.svg" height="75"
-						width="75" /></a>
-				<a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/0-dayff13r"> <img
-						src="assets/brand-github.svg" height="75" width="75" /></a>
-				<a class="link" target="_blank" rel="noopener noreferrer" href="https://tryhackme.com/p/0dayff13r">
-					<img src="assets/tryhackme.svg" height="75" width="75" /></a>
-				<a class="link" target="_blank" rel="noopener noreferrer" href="mailto:aleks.anashin@gmail.com"> <img
-						src="assets/email.svg" height="75" width="75" /></a>
+				<a class="link" target="_blank" rel="noopener noreferrer" href="https://kwork.ru/user/daffier"><img class="link-img" src="assets/kwork.png" height="60" width="60" style="filter: invert(1);" /></a>
+				<a class="link" target="_blank" rel="noopener noreferrer" href="https://t.me/daffier"><img class="link-img" src="assets/telegram.svg" height="80" width="80" /></a>
+				<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/DaffierSquare2"> <img class="link-img" src="assets/brand-instagram.svg" height="80" width="80" /></a>
+				<a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/0-DAyFF13R"> <img class="link-img" src="assets/brand-github.svg" height="75" width="75" /></a>
+				<a class="link" target="_blank" rel="noopener noreferrer" href="https://tryhackme.com/p/Daffier"> <img class="link-img" src="assets/tryhackme.svg" height="75" width="75" /></a>
+				<a class="link" target="_blank" rel="noopener noreferrer" href="mailto:aleks.anashin@gmail.com"> <img class="link-img" src="assets/email.svg" height="75" width="75" /></a>
 			</div>
 			<div>
 				<div id="typed-strings">
 					<span>Hello World!</span>
 					<span>Pentest - meaning of life</span>
-					<span>XSS - my favorite vulnerability</span>
-					<span>SQLi is also very interesting</span>
+					<span>XSS - my favorite web-vulnerability</span>
 					<span>HTML5, CSS3, JS</span>
+					<span>React <3</span>
 					<span>PHP 7</span>
 					<span>NO SYSTEM IS SAFE</span>
 					<span>What do I see myself as in the future? God of the Internet</span>
@@ -61,18 +68,22 @@
 					<span>Web security</span>
 					<span>My favorite color is blue.</span>
 					<span>SSRF</span>
+					<span>Zero days are just the beginning</span>
 					<span>Hi! I'm a programmer and cybersecurity specialist from Lithuania!</span>
 					<span>Why did I achieve more at 17 than many others?</span>
+					<span>UPD. I'm already over 17 >:(</span>
+					<span>Download the virus pack to your computer so it is immune to them....... ROFL :D</span>
+					<span>Meterpreter?</span>
 					<span>No, I'm not a black hacker. Why live in fear?</span>
 					<span>No way...</span>
-					<span>My full nickname is DaffierSquare2</span>
-					<span>Why am I square 2? Don't ask.</span>
+					<span>Breaking into systems to make them stronger</span>
 					<span>Are you still reading this?</span>
-					<span>nmap -sS YOUR_IP</span>
+					<span>nmap -sT YOUR_IP</span>
 					<span>HA-HA-HA. Funny joke, but no more jokes please</span>
 					<span>The OSI model - the queen of networks</span>
 					<span>DoS or DDoS?</span>
 					<span>You don't know anything about motorcycles? What are you then?</span>
+					<span>Cybersecurity is not just a job, it's a lifestyle</span>
 					<span>Let's do it again!</span>
 				</div>
 				<div class="text-typing">
